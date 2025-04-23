@@ -1,8 +1,13 @@
-body {
+* {
     margin: 0;
-    font-family: Arial, sans-serif;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
     background-color: black;
     color: white;
+    font-family: Arial, sans-serif;
 }
 
 header {
@@ -10,27 +15,52 @@ header {
     padding: 20px;
 }
 
-#title {
+h1 {
     cursor: pointer;
-    font-size: 2em;
-    font-weight: normal;
+}
+
+main {
+    padding: 10px;
 }
 
 .gallery {
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(3, 1fr); /* Minimum of 3 columns */
     gap: 10px;
-    padding: 20px;
 }
 
-.gallery img {
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+    height: 200px; /* Adjust height as needed */
+    border-radius: 10px; /* Rounded corners */
+}
+
+.gallery-item img {
     width: 100%;
-    height: auto;
-    user-select: none; /* Prevent text selection */
+    height: 100%;
+    object-fit: cover; /* Ensures images are cropped correctly */
+    border-radius: 10px; /* Ensure images also have rounded corners */
 }
 
+.placeholder {
+    background-color: gray; /* Placeholder color */
+    border-radius: 10px; /* Rounded corners for placeholder */
+}
+
+img {
+    pointer-events: none; /* Disable right-click */
+}
+
+/* Responsive adjustments */
 @media (max-width: 768px) {
     .gallery {
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(3, 1fr); /* Maintain 3 columns on mobile */
+    }
+}
+
+@media (max-width: 480px) {
+    .gallery {
+        grid-template-columns: repeat(2, 1fr); /* Adjust to 2 columns for very small screens */
     }
 }
