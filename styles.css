@@ -27,7 +27,7 @@ main {
     display: grid;
     grid-template-columns: repeat(3, 1fr); /* Minimum of 3 columns */
     gap: 10px;
-    padding: 10px;
+    
 }
 
 .gallery-item {
