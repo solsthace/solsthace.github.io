@@ -33,7 +33,7 @@ main {
 .gallery-item {
     position: relative;
     overflow: hidden;
-    height: 200px; /* Adjust height as needed */
+    height: 100px; /* Adjust height as needed */
     border-radius: 10px; /* Rounded corners */
 }
 
