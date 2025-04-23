@@ -62,6 +62,6 @@ img {
 
 @media (max-width: 480px) {
     .gallery {
-        grid-template-columns: repeat(3, 1fr); /* Adjust to 2 columns for very small screens */
+        grid-template-columns: repeat(3, 1fr); /* Adjust to 3 columns for very small screens */
     }
 }
