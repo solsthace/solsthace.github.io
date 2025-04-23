@@ -45,7 +45,7 @@ main {
 }
 
 .placeholder {
-    background-color: gray; /* Placeholder color */
+    background-color: #3f3f3f; /* Placeholder color */
     border-radius: 10px; /* Rounded corners for placeholder */
 }
 
