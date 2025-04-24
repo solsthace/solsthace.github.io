@@ -25,13 +25,14 @@ main {
 
 .gallery {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Responsive columns */
+    grid-template-columns: repeat(3, 1fr); /* Minimum of 3 columns */
     gap: 5px;
 }
 
 .gallery-item {
     position: relative;
     overflow: hidden;
+    height: 100px; /* Adjust height as needed */
     border-radius: 10px; /* Rounded corners */
     transition: transform 0.3s, filter 0.3s; /* Smooth transition for hover effects */
 }
