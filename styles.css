@@ -38,7 +38,7 @@ main {
 
 .gallery-item img {
     width: 100%;
-    height: auto; /* Maintain aspect ratio */
+    height: 100%; 
     object-fit: cover; /* Ensures images are cropped correctly */
     border-radius: 10px; /* Ensure images also have rounded corners */
 }
@@ -67,12 +67,12 @@ main {
 /* Responsive adjustments */
 @media (max-width: 768px) {
     .gallery {
-        grid-template-columns: repeat(2, 1fr); /* Adjust to 2 columns for smaller screens */
+        grid-template-columns: repeat(3, 1fr); /* Adjust to 3 columns for smaller screens */
     }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 768px) {
     .gallery {
-        grid-template-columns: 1fr; /* Adjust to 1 column for very small screens */
+        grid-template-columns: 3fr; /* Adjust to 3 column for very small screens */
     }
 }
