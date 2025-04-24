@@ -12,3 +12,17 @@ document.addEventListener('keydown', function(e) {
         alert("Screenshots are not allowed.");
     }
 });
+
+// Prevent zooming with Ctrl + Mouse Wheel
+document.addEventListener('wheel', function(e) {
+    if (e.ctrlKey || e.metaKey) {
+        e.preventDefault();
+    }
+}, { passive: false });
+
+// Prevent zooming with pinch gestures on touch devices
+document.addEventListener('touchmove', function(e) {
+    if (e.touches.length > 1) {
+        e.preventDefault();
+    }
+}, { passive: false });
