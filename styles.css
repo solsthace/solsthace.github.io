@@ -25,64 +25,54 @@ main {
 
 .gallery {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* Minimum of 3 columns */
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Responsive columns */
     gap: 5px;
-    
 }
 
 .gallery-item {
     position: relative;
     overflow: hidden;
-    cursor: pointer;
-    height: 100px; /* Adjust height as needed */
     border-radius: 10px; /* Rounded corners */
+    transition: transform 0.3s, filter 0.3s; /* Smooth transition for hover effects */
 }
 
 .gallery-item img {
     width: 100%;
-    height: 100%;
+    height: auto; /* Maintain aspect ratio */
     object-fit: cover; /* Ensures images are cropped correctly */
     border-radius: 10px; /* Ensure images also have rounded corners */
 }
-.gallery-item:hover img {
-    filter: brightness(70%); /* Darken the image on hover */
-}
-.overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
-    opacity: 0;
-    transition: opacity 0.3s ease;
+
+.gallery-item:hover {
+    transform: scale(1.05); /* Slightly increase size on hover */
+    filter: brightness(0.8); /* Dim the image on hover */
 }
 
-.gallery-item:hover .overlay {
-    opacity: 1; /* Show overlay on hover */
+.title {
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+    color: white;
+    font-size: 12px; /* Small font size */
+    padding: 2px 5px;
+    border-radius: 5px; /* Rounded corners for title */
 }
+
 .placeholder {
     background-color: #2a2a2a; /* Placeholder color */
     border-radius: 10px; /* Rounded corners for placeholder */
 }
 
-img {
-    pointer-events: none; /* Disable right-click */
-}
-
 /* Responsive adjustments */
 @media (max-width: 768px) {
     .gallery {
-        grid-template-columns: repeat(3, 1fr); /* Maintain 3 columns on mobile */
+        grid-template-columns: repeat(2, 1fr); /* Adjust to 2 columns for smaller screens */
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 480px) {
     .gallery {
-        grid-template-columns: repeat(3, 1fr); /* Adjust to 3 columns for very small screens */
+        grid-template-columns: 1fr; /* Adjust to 1 column for very small screens */
     }
 }
