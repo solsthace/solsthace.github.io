@@ -72,7 +72,7 @@ main {
     }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 768px) {
     .gallery {
         grid-template-columns: 3fr; /* Adjust to 3 column for very small screens */
     }
