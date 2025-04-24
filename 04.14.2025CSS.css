@@ -37,7 +37,7 @@ main {
 
 .gallery-item img {
     width: 100%;
-    height: 100%;
+    height: 90%;
     object-fit: cover; /* Ensures images are cropped correctly */
 }
 
@@ -56,8 +56,8 @@ img {
     }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 768px) {
     .gallery {
-        grid-template-columns: repeat(2, 1fr); /* Adjust to 2 columns for very small screens */
+        grid-template-columns: repeat(3, 1fr); /* Adjust to 3 columns for very small screens */
     }
 }
