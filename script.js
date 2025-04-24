@@ -1,3 +1,10 @@
+const galleryItems = document.querySelectorAll('.gallery-item');
+
+3galleryItems.forEach(item => {
+    item.addEventListener('click', function() {
+        console.log(`Navigating to: ${this.href}`);
+    });
+});
 // Prevent right-click on images
 document.addEventListener('contextmenu', function(e) {
     if (e.target.tagName === 'IMG') {
