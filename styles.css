@@ -45,7 +45,7 @@ main {
 }
 
 .gallery-item:hover {
-    transform: scale(0.5); /* Slightly increase size on hover */
+    transform: scale(0.9); /* Slightly increase size on hover */
     filter: brightness(0.8); /* Dim the image on hover */
 }
 
