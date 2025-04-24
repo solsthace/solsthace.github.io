@@ -45,7 +45,7 @@ main {
 }
 
 .gallery-item:hover {
-    transform: scale(1.05); /* Slightly increase size on hover */
+    transform: scale(0.8); /* Slightly increase size on hover */
     filter: brightness(0.8); /* Dim the image on hover */
 }
 
@@ -72,7 +72,7 @@ main {
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 480px) {
     .gallery {
         grid-template-columns: 3fr; /* Adjust to 3 column for very small screens */
     }
