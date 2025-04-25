@@ -50,6 +50,17 @@ window.onload = function() {
     document.body.classList.add('modal-open'); // Add class to body to prevent background interaction
 };
 
+// Function to enable keyboard input
+function enableKeyboardInput() {
+    document.addEventListener('keydown', handleKeyDown);
+}
+
+// Function to disable keyboard input
+function disableKeyboardInput() {
+    document.removeEventListener('keydown', handleKeyDown);
+}
+
+
 // Check the password
 function checkPassword() {
     const passwordInput = document.getElementById('password').value;
@@ -72,15 +83,3 @@ document.addEventListener('touchstart', function(event) {
 
 
 
-
-
-
-// Function to enable keyboard input
-function enableKeyboardInput() {
-    document.addEventListener('keydown', handleKeyDown);
-}
-
-// Function to disable keyboard input
-function disableKeyboardInput() {
-    document.removeEventListener('keydown', handleKeyDown);
-}
