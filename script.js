@@ -74,7 +74,16 @@ function disableKeyboardInput() {
     document.removeEventListener('keydown', handleKeyDown);
 }
 
-
+// Detect screenshot attempts
+document.addEventListener('visibilitychange', function() {
+    if (document.hidden) {
+        // Show overlay when the page is hidden (potential screenshot)
+        document.getElementById('screenshotOverlay').style.display = 'block';
+    } else {
+        // Hide overlay when the page is visible again
+        document.getElementById('screenshotOverlay').style.display = 'none';
+    }
+});
 
 
 
