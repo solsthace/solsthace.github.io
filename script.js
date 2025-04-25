@@ -26,3 +26,8 @@ document.addEventListener('touchmove', function(e) {
         e.preventDefault();
     }
 }, { passive: false });
+
+// Disable right-click context menu
+document.addEventListener('contextmenu', function(event) {
+    event.preventDefault(); // Prevent the default context menu from appearing
+});
