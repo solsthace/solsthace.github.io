@@ -65,66 +65,7 @@ main {
     border-radius: 10px; /* Rounded corners for placeholder */
 }
 
-/* Modal styles */
-.modal {
-    display: none; /* Hidden by default */
-    position: fixed;
-    z-index: 1000; /* Sit on top */
-    left: 0;
-    top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    background-color: rgba(0, 0, 0, 0.8); /* Black w/ opacity */
-    justify-content: center;
-    align-items: center;
-}
 
-.modal-content {
-    background-color: rgba(255, 255, 255, 10); /* White background with slight transparency */
-backdrop-filter: blur(2px);
-    color: black; /* Black text */
-    padding: 20px;
-    border-radius: 10px;
-    text-align: center;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    border: 2px solid white; /* Thin white outline */
-}
-
-/* Hint styles */
-.hint {
-    color: gray; /* Gray color for the hint */
-    margin-bottom: 10px;
-}
-
-/* Input and button styles */
-input[type="password"] {
-    padding: 10px;
-    margin-bottom: 10px;
-    border: none;
-    border-radius: 5px;
-    width: 80%;
-    background-color: #f0f0f0; /* Light gray background for input */
-    color: black; /* Black text */
-}
-
-button {
-    padding: 10px 20px;
-    border: none;
-    border-radius: 20px; /* Oblong shape */
-    background-color: white; /* White background */
-    color: black; /* Black text */
-    cursor: pointer;
-    transition: background-color 0.3s; /* Smooth transition for hover effect */
-}
-
-button:hover {
-    background-color: #e0e0e0; /* Slightly darker on hover */
-}
-
-/* Blur effect */
-.blurred {
-    filter: blur(1px);
-}
 /* Overlay styles */
 .overlay {
     display: none; /* Hidden by default */
