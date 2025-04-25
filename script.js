@@ -13,6 +13,19 @@ document.addEventListener('keydown', function(e) {
     }
 });
 
+// Show the modal on page load
+window.onload = function() {
+    // Check if music should be playing
+    if (!localStorage.getItem('musicPlaying')) {
+        const audio = document.getElementById('backgroundMusic');
+        audio.play();
+        localStorage.setItem('musicPlaying', 'true');
+    }
+
+    document.getElementById('passwordModal').style.display = 'flex'; // Use flex to center the modal
+    document.body.classList.add('modal-open'); // Add class to body to prevent background interaction
+};
+
 // Prevent zooming with Ctrl + Mouse Wheel
 document.addEventListener('wheel', function(e) {
     if (e.ctrlKey || e.metaKey) {
