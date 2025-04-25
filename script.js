@@ -69,3 +69,18 @@ function checkPassword() {
 document.addEventListener('touchstart', function(event) {
     event.preventDefault(); // Prevent the default long-press action
 }, { passive: false });
+
+
+
+
+
+
+// Function to enable keyboard input
+function enableKeyboardInput() {
+    document.addEventListener('keydown', handleKeyDown);
+}
+
+// Function to disable keyboard input
+function disableKeyboardInput() {
+    document.removeEventListener('keydown', handleKeyDown);
+}
