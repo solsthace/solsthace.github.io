@@ -125,7 +125,19 @@ button:hover {
 .blurred {
     filter: blur(1px);
 }
+/* Overlay styles */
+.overlay {
+    display: none; /* Hidden by default */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8); /* Black with opacity */
+    z-index: 2000; /* Sit on top of everything */
+}
 
+/* Other existing styles... */
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
