@@ -32,6 +32,18 @@ document.addEventListener('contextmenu', function(event) {
     event.preventDefault(); // Prevent the default context menu from appearing
 });
 
+// Optionally, disable keyboard shortcuts for opening developer tools
+document.addEventListener('keydown', function(event) {
+    // Disable F12 (Developer Tools), Ctrl+Shift+I (Inspect), Ctrl+U (View Source)
+    if (event.key === 'F12' || (event.ctrlKey && event.shiftKey && event.key === 'I') || (event.ctrlKey && event.key === 'U')) {
+        event.preventDefault();
+    }
+});
+// Disable right-click context menu
+document.addEventListener('contextmenu', function(event) {
+    event.preventDefault(); // Prevent the default context menu from appearing
+});
+
 // Disable long press on the entire page
 document.addEventListener('touchstart', function(event) {
     event.preventDefault(); // Prevent the default long-press action
