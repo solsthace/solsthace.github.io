@@ -31,6 +31,20 @@ document.addEventListener('touchmove', function(e) {
 document.addEventListener('contextmenu', function(event) {
     event.preventDefault(); // Prevent the default context menu from appearing
 });
+// Check the password
+function checkPassword() {
+    const passwordInput = document.getElementById('password').value;
+    const correctPassword = "119"; // Replace with your actual password
+
+    if (passwordInput === correctPassword) {
+        // Hide the modal and remove the blur effect
+        document.getElementById('passwordModal').style.display = 'none';
+        document.getElementById('content').classList.remove('blurred');
+        document.body.classList.remove('modal-open'); // Remove class to allow background interaction
+    } else {
+        alert("Incorrect password. Please try again.");
+    }
+}
 
 // Optionally, disable keyboard shortcuts for opening developer tools
 document.addEventListener('keydown', function(event) {
@@ -61,25 +75,7 @@ function disableKeyboardInput() {
 }
 
 
-// Check the password
-function checkPassword() {
-    const passwordInput = document.getElementById('password').value;
-    const correctPassword = "119"; // Replace with your actual password
 
-    if (passwordInput === correctPassword) {
-        // Hide the modal and remove the blur effect
-        document.getElementById('passwordModal').style.display = 'none';
-        document.getElementById('content').classList.remove('blurred');
-        document.body.classList.remove('modal-open'); // Remove class to allow background interaction
-    } else {
-        alert("Incorrect password. Please try again.");
-    }
-}
-
-// Disable long press on the entire page
-document.addEventListener('touchstart', function(event) {
-    event.preventDefault(); // Prevent the default long-press action
-}, { passive: false });
 
 
 
