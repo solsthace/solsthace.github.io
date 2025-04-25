@@ -1,46 +1,28 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Solsthace</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <header>
-        <h1 onclick="location.href='index.html'">Solsthace</h1>
-    </header>
-    <main>
-        <div class="gallery">
-            <div class="gallery-item">
-                <a href="https://www.youtube.com" target="_blank">
-                    <img src="01.04.14.25.gif" alt="Image 1">
-                    <div class="title">04.14.2025</div>
-                </a>
-            </div>
-            <div class="gallery-item">
-                <a href="https://www.youtube.com" target="_blank">
-                    <img src="02.11.28.24.gif" alt="Image 2">
-                    <div class="title">11.28.2024</div>
-                </a>
-            </div>
-            
-            <div class="gallery-item placeholder
-                 <div class="gallery-item placeholder"></div>
-            <div class="gallery-item placeholder"></div>
-            <div class="gallery-item placeholder"></div>
-            <div class="gallery-item placeholder"></div>
-            <div class="gallery-item placeholder"></div>
-            <div class="gallery-item placeholder"></div>
-            <div class="gallery-item placeholder"></div>
-            <div class="gallery-item placeholder"></div>
-            <div class="gallery-item placeholder"></div>
-            <div class="gallery-item placeholder"></div>
-            <div class="gallery-item placeholder"></div>
-            <div class="gallery-item placeholder"></div>
-            <div class="gallery-item placeholder"></div>
-        </div>
-    </main>
-    <script src="script.js"></script>
-</body>
-</html>
+// Prevent right-click on images
+document.addEventListener('contextmenu', function(e) {
+    if (e.target.tagName === 'IMG') {
+        e.preventDefault();
+    }
+});
+
+// Prevent screenshot (not fully effective, but can deter casual users)
+document.addEventListener('keydown', function(e) {
+    if (e.key === 'PrintScreen') {
+        e.preventDefault();
+        alert("Screenshots are not allowed.");
+    }
+});
+
+// Prevent zooming with Ctrl + Mouse Wheel
+document.addEventListener('wheel', function(e) {
+    if (e.ctrlKey || e.metaKey) {
+        e.preventDefault();
+    }
+}, { passive: false });
+
+// Prevent zooming with pinch gestures on touch devices
+document.addEventListener('touchmove', function(e) {
+    if (e.touches.length > 1) {
+        e.preventDefault();
+    }
+}, { passive: false });
