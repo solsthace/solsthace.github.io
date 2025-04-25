@@ -31,3 +31,8 @@ document.addEventListener('touchmove', function(e) {
 document.addEventListener('contextmenu', function(event) {
     event.preventDefault(); // Prevent the default context menu from appearing
 });
+
+// Disable long press on the entire page
+document.addEventListener('touchstart', function(event) {
+    event.preventDefault(); // Prevent the default long-press action
+}, { passive: false });
