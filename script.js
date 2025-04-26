@@ -25,7 +25,7 @@ window.onload = function() {
     if (!localStorage.getItem('musicPlaying')) {
         startMusic(); // Start music if it's not already playing
     }
-};
+});
 
 
 // Prevent zooming with Ctrl + Mouse Wheel
