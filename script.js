@@ -13,18 +13,20 @@ document.addEventListener('keydown', function(e) {
     }
 });
 
-// Show the modal on page load
-window.onload = function() {
-    // Check if music should be playing
-    if (!localStorage.getItem('musicPlaying')) {
-        const audio = document.getElementById('backgroundMusic');
-        audio.play();
-        localStorage.setItem('musicPlaying', 'true');
-    }
+// Function to start music
+function startMusic() {
+    const audio = document.getElementById('backgroundMusic');
+    audio.play(); // Play the audio
+    localStorage.setItem('musicPlaying', 'true'); // Store in local storage to remember that music is playing
+}
 
-    document.getElementById('passwordModal').style.display = 'flex'; // Use flex to center the modal
-    document.body.classList.add('modal-open'); // Add class to body to prevent background interaction
+// Check if music should be playing
+window.onload = function() {
+    if (!localStorage.getItem('musicPlaying')) {
+        startMusic(); // Start music if it's not already playing
+    }
 };
+
 
 // Prevent zooming with Ctrl + Mouse Wheel
 document.addEventListener('wheel', function(e) {
