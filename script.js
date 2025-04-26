@@ -13,22 +13,15 @@ document.addEventListener('keydown', function(e) {
     }
 });
 
-// Function to start music
-function startMusic() {
-    const audio = document.getElementById('backgroundMusic');
-    audio.play().catch(error => {
-        console.log("Audio playback failed: ", error);
-    }); // Attempt to play the audio
-    localStorage.setItem('musicPlaying', 'true'); // Store in local storage to remember that music is playing
-}
-
-// Check if music should be playing
+// Show the modal on page load
 window.onload = function() {
+    // Check if music should be playing
     if (!localStorage.getItem('musicPlaying')) {
-        startMusic(); // Start music if it's not already marked as playing
+        const audio = document.getElementById('backgroundMusic');
+        audio.play();
+        localStorage.setItem('musicPlaying', 'true');
     }
 });
-
 
 // Prevent zooming with Ctrl + Mouse Wheel
 document.addEventListener('wheel', function(e) {
