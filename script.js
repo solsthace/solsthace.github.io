@@ -21,7 +21,10 @@ window.onload = function() {
         audio.play();
         localStorage.setItem('musicPlaying', 'true');
     }
-});
+
+    document.getElementById('passwordModal').style.display = 'flex'; // Use flex to center the modal
+    document.body.classList.add('modal-open'); // Add class to body to prevent background interaction
+};
 
 // Prevent zooming with Ctrl + Mouse Wheel
 document.addEventListener('wheel', function(e) {
@@ -68,7 +71,6 @@ document.addEventListener('visibilitychange', function() {
         document.getElementById('screenshotOverlay').style.display = 'none';
     }
 });
-
 
 
 
